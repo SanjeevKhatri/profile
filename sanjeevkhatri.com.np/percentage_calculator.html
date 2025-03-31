@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enter any 2 values to Calculate</h2>
+
+    <form id="calculatorForm">
+        <label for="base">Base Number:</label>
+        <input type="text" id="base" name="base">
+
+        <label for="percentage">Percentage:</label>
+        <input type="text" id="percentage" name="percentage">
+
+        <label for="result">Result:</label>
+        <input type="text" id="result" name="result">
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <div id="resultContainer" class="result"></div>
+
+    <script>
+        function calculate() {
+            var base = parseFloat(document.getElementById("base").value);
+            var percentage = parseFloat(document.getElementById("percentage").value);
+            var result = parseFloat(document.getElementById("result").value);
+
+            if (!isNaN(base) && !isNaN(percentage) && isNaN(result)) {
+                // Calculate result
+                result = (base * percentage) / 100;
+                document.getElementById("resultContainer").innerHTML = 'Result: ' + result.toFixed(2);
+            } else if (!isNaN(base) && isNaN(percentage) && !isNaN(result)) {
+                // Calculate percentage
+                percentage = (result / base) * 100;
+                document.getElementById("resultContainer").innerHTML = 'Percentage: ' + percentage.toFixed(2) + '%';
+            } else if (isNaN(base) && !isNaN(percentage) && !isNaN(result)) {
+                // Calculate base
+                base = result / (percentage / 100);
+                document.getElementById("resultContainer").innerHTML = 'Base Number: ' + base.toFixed(2);
+            } else {
+                document.getElementById("resultContainer").innerHTML = 'Please provide any two values.';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163120287-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-163120287-2');
+    </script>
+    <title>Welcome to sanjeevkhatri.com.np</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+    <link href="common-css/bootstrap.css" rel="stylesheet">
+    <link href="common-css/ionicons.css" rel="stylesheet">
+    <link href="common-css/fluidbox.min.css" rel="stylesheet">
+    <link href="01-cv-portfolio/css/styles.css" rel="stylesheet">
+    <link href="01-cv-portfolio/css/responsive.css" rel="stylesheet">
+</head>
+<body>
+    <section class="education-section section">
+        <div class="container">
+            <div class="row">
+                <h4 style="font-size: 500%;">"Welcome to Find My Crush"</h4>
+                <h5>The theory of Quantum Mechanics could explain all of chemistry and the various properties of substances, it was a tremendous success. But still there was the problem of the explanation of love and it's matters. So, we took this as a opportunity and built the system that will read your mind and find your crush</h5>
+                <h4 style="margin-top: 3%; font-size: 164%;">"We are not saying we are one step ahead of Quantum Mechanics but soon you will be"</h4>
+            </div>
+        </div>
+    </section>
+    <section class="experience-section section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-18 col-md-18 col-lg-12">
+                    <div class="info">
+                        <div class="right-area">
+                            <label for="name">Enter your Name :  </label><input  style="margin-left: 2%;" type="text" name="name" id="name"/><button style="border: 2px solid; color: white; padding: 1%; margin-left: 2%;" class="downlad-btn" onclick="myFunction()">Find My Crush</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-18 col-md-18 col-lg-12">
+                <div class="info">
+                    <div class="right-area">
+                        <label style="margin-top: 4%; font-size: 200%;" id="crushl"></label>
+                        <label style="font-size: 350%; color: #002366;" id="crush"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            document.getElementById('crushl').innerText = "";
+            const name = document.getElementById('name').value;
+            if (name==="") {
+                document.getElementById('crush').innerText = "Who are you? An alien? Please type your name first";
+            }else if (name.toUpperCase()==="UJINA KANSAKAR" || name.toUpperCase()==="UJINA" ) {
+                document.getElementById('crushl').innerText = "You have crush on: ";
+                document.getElementById('crush').innerText = "Bikash Shrestha ❤";
+            }else if (name.toUpperCase()==="Punam" || name.toUpperCase()==="Punam Pandit" || name.toUpperCase()==="Punam Khatri" ) {
+                document.getElementById('crushl').innerText = "You have crush on: ";
+                document.getElementById('crush').innerText = "Sanjeev Khatri ❤";
+            }else{
+                document.getElementById('crush').innerText = "Don't even try to trick the system. Please use your real name";
+            }
+        }
+    </script>
+</body>
+</html>

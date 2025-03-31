@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: royalblue;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.translation {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    color: royalblue;
+}
+.search, .add-section {
+    margin: 20px 0;
+}
+.search input, .add-section input {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+}
+.search button, .add-section button {
+    padding: 10px;
+    background-color: white;
+    color: royalblue;
+    border: none;
+    cursor: pointer;
+}

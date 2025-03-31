@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Notifier</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6pBk9S5cBxN/A2T6JQpi5qKofXq1dK4M" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: royalblue;
+            color: white;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            color: royalblue;
+        }
+
+        h2 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Create Event</h2>
+        <form action="process.php" method="POST">
+            <div class="form-group">
+                <label for="event_name">Event Name:</label>
+                <input type="text" class="form-control" id="event_name" name="event_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event_category">Event Category:</label>
+                <input type="text" class="form-control" id="event_category" name="event_category" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event_date">Event Date:</label>
+                <input type="date" class="form-control" id="event_date" name="event_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event_description">Event Description:</label>
+                <textarea class="form-control" id="event_description" name="event_description" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="event_contact">Event Contact:</label>
+                <input type="text" class="form-control" id="event_contact" name="event_contact" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Event</button>
+        </form>
+
+        <!-- Button to view all events -->
+        <a href="events.php" class="btn btn-success mt-3">View All Events</a>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6Q5jHSX6P5IkZHpAIt9MKC26OELJ0" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6pBk9S5cBxN/A2T6JQpi5qKofXq1dK4M" crossorigin="anonymous"></script>
+
+</body>
+</html>
